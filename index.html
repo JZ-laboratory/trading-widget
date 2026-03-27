@@ -7,13 +7,14 @@
     html, body {
       margin: 0;
       padding: 8px;
-      background: ##191919;
+      background: #191919;
+      color-scheme: dark;
     }
 
     .box {
       width: 100%;
       height: 90px;
-      background: ##191919;
+      background: #191919;
       border-radius: 14px;
       overflow: hidden;
       display: flex;
@@ -29,8 +30,8 @@
 <body>
   <div class="box">
     <tv-ticker-tape
-      symbols="FOREXCOM:NSXUSD,FOREXCOM:SPXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,OANDA:XAUUSD"
-      color-theme="dark"
+      symbols="NASDAQ:NDX,FOREXCOM:SPXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,OANDA:XAUUSD"
+      theme="dark"
       locale="en"
       hide-chart
       hover-type="chart">
