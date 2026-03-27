@@ -3,62 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Ticker Tape</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #0e1117;
-      overflow: hidden;
-      height: 40px;
-    }
-
-    .wrap {
-      height: 40px;
-      overflow: hidden;
-      background: #0e1117;
-    }
-
-    .tradingview-widget-container {
-      height: 40px !important;
-      background: #0e1117 !important;
-    }
-
-    .tradingview-widget-container__widget {
-      height: 40px !important;
-      background: #0e1117 !important;
-    }
-
-    iframe {
-      height: 40px !important;
-      min-height: 40px !important;
-    }
-  </style>
 </head>
-<body>
-  <div class="wrap">
-    <div class="tradingview-widget-container">
-      <div class="tradingview-widget-container__widget"></div>
-      <script
-        type="text/javascript"
-        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
-        async
-      >
-      {
-        "symbols": [
-          { "proName": "FOREXCOM:SPXUSD", "title": "S&P 500" },
-          { "proName": "NASDAQ:NDX", "title": "NASDAQ" },
-          { "proName": "FX:EURUSD", "title": "EUR/USD" },
-          { "proName": "OANDA:XAUUSD", "title": "Gold" },
-          { "proName": "BINANCE:BTCUSDT", "title": "BTC" }
-        ],
-        "showSymbolLogo": true,
-        "isTransparent": true,
-        "displayMode": "adaptive",
-        "colorTheme": "dark",
-        "locale": "en"
-      }
-      </script>
-    </div>
+
+<body style="margin:0; background-color:#0e1117;">
+
+<div style="height:40px; overflow:hidden;">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+      "symbols": [
+        { "proName": "FOREXCOM:SPXUSD", "title": "S&P 500" },
+        { "proName": "NASDAQ:NDX", "title": "NASDAQ" },
+        { "proName": "FX:EURUSD", "title": "EUR/USD" },
+        { "proName": "OANDA:XAUUSD", "title": "Gold" },
+        { "proName": "BINANCE:BTCUSDT", "title": "BTC" }
+      ],
+      "showSymbolLogo": true,
+      "isTransparent": true,
+      "displayMode": "adaptive",
+      "colorTheme": "dark",
+      "locale": "en"
+    }
+    </script>
   </div>
+</div>
+
 </body>
 </html>
