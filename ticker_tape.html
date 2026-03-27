@@ -1,83 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TradingView Ticker Tape</title>
-  <style>
-    :root {
-      --bar-height: 40px;
-      --bg: #0f1115;
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: var(--bar-height);
-      min-height: var(--bar-height);
-      max-height: var(--bar-height);
-      overflow: hidden;
-      background: var(--bg);
-    }
-
-    body {
-      position: relative;
-      display: block;
-    }
-
-    .bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: var(--bar-height);
-      min-height: var(--bar-height);
-      max-height: var(--bar-height);
-      overflow: hidden;
-      background: var(--bg);
-      z-index: 9999;
-    }
-
-    .tradingview-widget-container {
-      width: 100%;
-      height: var(--bar-height) !important;
-      min-height: var(--bar-height) !important;
-      max-height: var(--bar-height) !important;
-      overflow: hidden;
-      background: var(--bg) !important;
-    }
-
-    .tradingview-widget-container__widget {
-      width: 100%;
-      height: var(--bar-height) !important;
-      min-height: var(--bar-height) !important;
-      max-height: var(--bar-height) !important;
-      overflow: hidden;
-      background: var(--bg) !important;
-    }
-
-    iframe {
-      width: 100% !important;
-      height: var(--bar-height) !important;
-      min-height: var(--bar-height) !important;
-      max-height: var(--bar-height) !important;
-      border: 0 !important;
-      background: var(--bg) !important;
-      display: block !important;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Ticker Tape</title>
 </head>
-<body>
-  <div class="bar">
-    <div class="tradingview-widget-container">
-      <div class="tradingview-widget-container__widget"></div>
-      <script
-        type="text/javascript"
-        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
-        async
-      >
-      {
+
+<body style="margin:0; background-color:#0e1117;">
+
+<div style="height:40px; overflow:hidden;">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
         "symbols": [
           { "proName": "FOREXCOM:SPXUSD", "title": "S&P500" },
           { "proName": "FOREXCOM:NSXUSD", "title": "US100" },
