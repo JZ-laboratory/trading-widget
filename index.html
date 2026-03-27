@@ -7,19 +7,19 @@
   <style>
     html, body {
       margin: 0;
-      padding: 0;
-      height: 90px;
-      overflow: hidden;
-      background: #0f1115;
+      padding: 10px;
+      background: transparent;
     }
 
-    .wrap {
-      height: 90px;
+    .box {
       width: 100%;
-      overflow: hidden;
+      height: 90px;
       background: #0f1115;
+      border-radius: 12px;
+      overflow: hidden;
       display: flex;
       align-items: center;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
     }
 
     tv-ticker-tape {
@@ -30,9 +30,9 @@
 
 <body>
 
-<div class="wrap">
+<div class="box">
   <tv-ticker-tape
-    symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD"
+    symbols="FOREXCOM:SPXUSD,NASDAQ:NDX,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,OANDA:XAUUSD"
     hide-chart
     hover-type="chart">
   </tv-ticker-tape>
