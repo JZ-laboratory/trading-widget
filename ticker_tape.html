@@ -1,51 +1,77 @@
+Použij přesně tenhle kód do ticker_tape.html:
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TradingView Ticker Tape</title>
   <style>
+    :root {
+      --bar-height: 40px;
+      --bg: #0f1115;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
-      height: 40px;
+      width: 100%;
+      height: var(--bar-height);
+      min-height: var(--bar-height);
+      max-height: var(--bar-height);
       overflow: hidden;
-      background: #0f1115;
+      background: var(--bg);
     }
 
     body {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
+      position: relative;
+      display: block;
     }
 
-    .wrap {
+    .bar {
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 40px;
+      height: var(--bar-height);
+      min-height: var(--bar-height);
+      max-height: var(--bar-height);
       overflow: hidden;
-      background: #0f1115;
+      background: var(--bg);
+      z-index: 9999;
     }
 
     .tradingview-widget-container {
       width: 100%;
-      height: 40px !important;
-      background: #0f1115 !important;
+      height: var(--bar-height) !important;
+      min-height: var(--bar-height) !important;
+      max-height: var(--bar-height) !important;
+      overflow: hidden;
+      background: var(--bg) !important;
     }
 
     .tradingview-widget-container__widget {
       width: 100%;
-      height: 40px !important;
-      background: #0f1115 !important;
+      height: var(--bar-height) !important;
+      min-height: var(--bar-height) !important;
+      max-height: var(--bar-height) !important;
+      overflow: hidden;
+      background: var(--bg) !important;
     }
 
     iframe {
       width: 100% !important;
-      height: 40px !important;
-      min-height: 40px !important;
+      height: var(--bar-height) !important;
+      min-height: var(--bar-height) !important;
+      max-height: var(--bar-height) !important;
+      border: 0 !important;
+      background: var(--bg) !important;
+      display: block !important;
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="bar">
     <div class="tradingview-widget-container">
       <div class="tradingview-widget-container__widget"></div>
       <script
@@ -74,6 +100,5 @@
   </div>
 </body>
 </html>
-
 
 
