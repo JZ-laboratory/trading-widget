@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Top Stories</title>
+  <meta charset="UTF-8">
+  <title>Trading News</title>
+
   <style>
     html, body {
       margin: 0;
-      padding: 8px;
-      background: #0b0d12;
+      padding: 10px;
+      background: transparent;
+      font-family: sans-serif;
     }
 
     .box {
       width: 100%;
+      height: 500px;
+      background: #0b0d12;
       border-radius: 14px;
       overflow: hidden;
-      background: #0f1115;
+      display: flex;
+      flex-direction: column;
       box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+    }
+
+    .tradingview-widget-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .tradingview-widget-container__widget {
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
+
 <body>
-  <div class="box">
-    <div class="tradingview-widget-container">
-      <div class="tradingview-widget-container__widget"></div>
-      <script
-        type="text/javascript"
-        src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js"
-        async
-      >
-      {
-        "feedMode": "all_symbols",
-        "isTransparent": false,
-        "displayMode": "adaptive",
-        "width": "100%",
-        "height": 600,
-        "colorTheme": "dark",
-        "locale": "en"
-      }
-      </script>
-    </div>
+
+<div class="box">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+
+    <script
+      type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js"
+      async>
+    {
+      "feedMode": "all_symbols",
+      "colorTheme": "dark",
+      "isTransparent": false,
+      "displayMode": "adaptive",
+      "width": "100%",
+      "height": "100%",
+      "locale": "en"
+    }
+    </script>
+
   </div>
+</div>
+
 </body>
 </html>
