@@ -1,35 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Myfxbook Toolbar</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 10px;
-      background: #191919;
-      color-scheme: dark;
-    }
+<meta charset="UTF-8">
+<title>News Alert</title>
 
-    .box {
-      width: 100%;
-      min-height: 70px;
-      background: #191919;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
-    }
+<style>
+body {
+  margin: 0;
+  padding: 10px;
+  background: #191919;
+  font-family: Arial, sans-serif;
+}
 
-    .inner {
-      padding: 0;
-    }
-  </style>
+.box {
+  width: 100%;
+  height: 60px;
+  background: #191919;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+.badge {
+  background: #ff3d00;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.event {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.warning {
+  margin-left: auto;
+  font-size: 12px;
+  color: #ff5252;
+}
+</style>
+
 </head>
+
 <body>
-  <div class="box">
-    <div class="inner">
-      <script type="text/javascript" src="https://widgets.myfxbook.com/scripts/toolbar.js"></script>
-    </div>
+
+<div class="box">
+  <div class="alert">
+    <div class="badge">HIGH</div>
+    <div class="time">14:30</div>
+    <div class="event">US CPI (YoY)</div>
   </div>
+
+  <div class="warning">
+    ⚠️ Do not trade 5 min before
+  </div>
+</div>
+
 </body>
 </html>
