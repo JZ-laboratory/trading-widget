@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>US100 Heatmap</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 10px;
+      background: #191919;
+      color-scheme: dark;
+    }
+
+    .box {
+      width: 800px;
+      height: 800px;
+      background: #191919;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+    }
+
+    .tradingview-widget-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .tradingview-widget-container__widget {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script
+        type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js"
+        async
+      >
+      {
+        "dataSource": "NASDAQ100",
+        "grouping": "sector",
+        "blockSize": "market_cap_basic",
+        "blockColor": "change",
+        "locale": "en",
+        "symbolUrl": "",
+        "colorTheme": "dark",
+        "hasTopBar": false,
+        "isDataSetEnabled": false,
+        "isZoomEnabled": true,
+        "hasSymbolTooltip": true,
+        "isMonoSize": false,
+        "width": "100%",
+        "height": "100%"
+      }
+      </script>
+    </div>
+  </div>
+</body>
+</html>
