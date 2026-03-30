@@ -2,40 +2,34 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Market Toolbar</title>
-
+  <title>Myfxbook Toolbar</title>
   <style>
     html, body {
       margin: 0;
       padding: 10px;
       background: #191919;
+      color-scheme: dark;
     }
 
     .box {
       width: 100%;
-      height: 60px;
+      min-height: 70px;
       background: #191919;
       border-radius: 14px;
       overflow: hidden;
-      display: flex;
-      align-items: center;
       box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
     }
 
-    #mfxtoolbar {
-      width: 100%;
-      filter: invert(1) hue-rotate(180deg);
+    .inner {
+      padding: 0;
     }
   </style>
 </head>
-
 <body>
-
-<div class="box">
-  <div id="mfxtoolbar"></div>
-</div>
-
-<script type="text/javascript" src="https://widgets.myfxbook.com/scripts/toolbar.js"></script>
-
+  <div class="box">
+    <div class="inner">
+      <script type="text/javascript" src="https://widgets.myfxbook.com/scripts/toolbar.js"></script>
+    </div>
+  </div>
 </body>
 </html>
