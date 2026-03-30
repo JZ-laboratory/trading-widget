@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Economic Calendar</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 1px;
+      background: #191919;
+      color-scheme: dark;
+    }
+
+    .box {
+      width: 500px;
+      height: 500px;
+      background: #191919;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: invert(1) hue-rotate(180deg);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <iframe src="https://widget.myfxbook.com/widget/calendar.html?lang=en&impacts=2,3&symbols=USD,EUR,GBP,JPY"></iframe>
+</div>
+
+</body>
+</html>
